@@ -1,0 +1,459 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323:wght@400&display=swap');
+@import 'tailwindcss';
+
+:root {
+  --cream: #F3F1E8;
+  --blue-main: #194FA5;
+  --blue-deep: #123C83;
+  --blue-light: #8FC7E5;
+  --blue-sky: #5E9DD1;
+  --green-grass: #789B4A;
+  --green-dark: #334D36;
+  --cream-pixel: #FFFDF3;
+  --yellow: #F3D95B;
+  --text-dark: #172B48;
+  --gray-pixel: #C7CBD0;
+  --red-error: #D94354;
+  --green-success: #477F42;
+  --white: #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+  /*
+    Chunky pixel arrow — 32×32, navy body with thick white outline
+    and a royal-blue inner fill. Hotspot at (0,0).
+  */
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32' shape-rendering='crispEdges'%3E%3C!-- black outline --%3E%3Crect x='0' y='0' width='4' height='4' fill='%23172B48'/%3E%3Crect x='0' y='4' width='4' height='4' fill='%23172B48'/%3E%3Crect x='0' y='8' width='4' height='4' fill='%23172B48'/%3E%3Crect x='0' y='12' width='4' height='4' fill='%23172B48'/%3E%3Crect x='0' y='16' width='4' height='4' fill='%23172B48'/%3E%3Crect x='0' y='20' width='4' height='4' fill='%23172B48'/%3E%3Crect x='0' y='24' width='4' height='4' fill='%23172B48'/%3E%3Crect x='4' y='4' width='4' height='4' fill='%23172B48'/%3E%3Crect x='4' y='8' width='4' height='4' fill='%23172B48'/%3E%3Crect x='4' y='12' width='4' height='4' fill='%23172B48'/%3E%3Crect x='4' y='16' width='4' height='4' fill='%23172B48'/%3E%3Crect x='4' y='20' width='4' height='4' fill='%23172B48'/%3E%3Crect x='8' y='8' width='4' height='4' fill='%23172B48'/%3E%3Crect x='8' y='12' width='4' height='4' fill='%23172B48'/%3E%3Crect x='8' y='16' width='4' height='4' fill='%23172B48'/%3E%3Crect x='12' y='12' width='4' height='4' fill='%23172B48'/%3E%3Crect x='12' y='16' width='4' height='4' fill='%23172B48'/%3E%3Crect x='16' y='16' width='4' height='4' fill='%23172B48'/%3E%3Crect x='8' y='20' width='4' height='4' fill='%23172B48'/%3E%3Crect x='12' y='20' width='4' height='4' fill='%23172B48'/%3E%3Crect x='12' y='24' width='4' height='4' fill='%23172B48'/%3E%3Crect x='16' y='24' width='4' height='4' fill='%23172B48'/%3E%3Crect x='16' y='28' width='4' height='4' fill='%23172B48'/%3E%3Crect x='20' y='28' width='4' height='4' fill='%23172B48'/%3E%3C!-- white highlight edge --%3E%3Crect x='4' y='0' width='4' height='4' fill='%23FFFFFF'/%3E%3Crect x='8' y='4' width='4' height='4' fill='%23FFFFFF'/%3E%3Crect x='12' y='8' width='4' height='4' fill='%23FFFFFF'/%3E%3Crect x='16' y='12' width='4' height='4' fill='%23FFFFFF'/%3E%3Crect x='20' y='16' width='4' height='4' fill='%23FFFFFF'/%3E%3Crect x='4' y='24' width='4' height='4' fill='%23FFFFFF'/%3E%3Crect x='8' y='24' width='4' height='4' fill='%23FFFFFF'/%3E%3C!-- royal blue fill --%3E%3Crect x='4' y='0' width='4' height='4' fill='%23194FA5' opacity='0.0'/%3E%3Crect x='4' y='4' width='4' height='4' fill='%23194FA5'/%3E%3Crect x='4' y='8' width='4' height='4' fill='%23194FA5'/%3E%3Crect x='4' y='12' width='4' height='4' fill='%23194FA5'/%3E%3Crect x='4' y='16' width='4' height='4' fill='%23194FA5'/%3E%3Crect x='8' y='8' width='4' height='4' fill='%23194FA5' opacity='0.0'/%3E%3Crect x='8' y='12' width='4' height='4' fill='%238FC7E5'/%3E%3Crect x='8' y='16' width='4' height='4' fill='%238FC7E5'/%3E%3Crect x='12' y='16' width='4' height='4' fill='%238FC7E5' opacity='0.0'/%3E%3Crect x='8' y='20' width='4' height='4' fill='%23194FA5'/%3E%3Crect x='12' y='20' width='4' height='4' fill='%238FC7E5'/%3E%3Crect x='12' y='24' width='4' height='4' fill='%23194FA5'/%3E%3Crect x='16' y='24' width='4' height='4' fill='%238FC7E5'/%3E%3Crect x='16' y='28' width='4' height='4' fill='%23194FA5'/%3E%3C/svg%3E") 0 0, auto;
+}
+
+/* Chunky pointer — yellow star hand for buttons/links */
+button, a, [role="button"], select {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32' shape-rendering='crispEdges'%3E%3C!-- finger --%3E%3Crect x='8' y='0' width='4' height='4' fill='%23172B48'/%3E%3Crect x='12' y='0' width='4' height='4' fill='%23172B48'/%3E%3Crect x='8' y='4' width='4' height='4' fill='%23F3D95B'/%3E%3Crect x='12' y='4' width='4' height='4' fill='%23172B48'/%3E%3Crect x='8' y='8' width='4' height='4' fill='%23F3D95B'/%3E%3Crect x='12' y='8' width='4' height='4' fill='%23172B48'/%3E%3Crect x='8' y='12' width='4' height='4' fill='%23F3D95B'/%3E%3Crect x='12' y='12' width='4' height='4' fill='%23172B48'/%3E%3C!-- knuckle join --%3E%3Crect x='4' y='16' width='4' height='4' fill='%23172B48'/%3E%3Crect x='8' y='16' width='4' height='4' fill='%23F3D95B'/%3E%3Crect x='12' y='16' width='4' height='4' fill='%23F3D95B'/%3E%3Crect x='16' y='16' width='4' height='4' fill='%23172B48'/%3E%3C!-- palm row 1 --%3E%3Crect x='4' y='20' width='4' height='4' fill='%23172B48'/%3E%3Crect x='8' y='20' width='4' height='4' fill='%23F3D95B'/%3E%3Crect x='12' y='20' width='4' height='4' fill='%23F3D95B'/%3E%3Crect x='16' y='20' width='4' height='4' fill='%23172B48'/%3E%3C!-- palm row 2 --%3E%3Crect x='4' y='24' width='16' height='4' fill='%23172B48'/%3E%3Crect x='8' y='24' width='8' height='4' fill='%23F3D95B'/%3E%3C!-- base --%3E%3Crect x='4' y='28' width='16' height='4' fill='%23172B48'/%3E%3Crect x='8' y='28' width='8' height='4' fill='%23FFFDF3'/%3E%3C!-- accent dot on fingertip --%3E%3Crect x='9' y='1' width='2' height='2' fill='%23FFFFFF'/%3E%3C/svg%3E") 10 0, pointer;
+}
+
+input, textarea {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='28' viewBox='0 0 16 28' shape-rendering='crispEdges'%3E%3Crect x='2' y='0' width='12' height='4' fill='%23172B48'/%3E%3Crect x='4' y='0' width='8' height='4' fill='%238FC7E5'/%3E%3Crect x='6' y='4' width='4' height='20' fill='%23172B48'/%3E%3Crect x='7' y='4' width='2' height='20' fill='%23F3D95B'/%3E%3Crect x='2' y='24' width='12' height='4' fill='%23172B48'/%3E%3Crect x='4' y='24' width='8' height='4' fill='%238FC7E5'/%3E%3C/svg%3E") 8 14, text;
+}
+
+body {
+  background-color: var(--cream);
+  font-family: 'VT323', monospace;
+  color: var(--text-dark);
+  image-rendering: pixelated;
+}
+
+/* Pixel window chrome */
+.pixel-window {
+  background: var(--cream-pixel);
+  border: 3px solid var(--blue-deep);
+  box-shadow: 4px 4px 0 var(--blue-deep);
+}
+
+.pixel-titlebar {
+  background: var(--blue-main);
+  color: white;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 10px;
+  padding: 6px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 3px solid var(--blue-deep);
+  user-select: none;
+}
+
+.pixel-titlebar-btn {
+  width: 14px;
+  height: 14px;
+  background: var(--gray-pixel);
+  border: 2px solid var(--blue-deep);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  cursor: pointer;
+  color: var(--text-dark);
+  font-family: 'Press Start 2P', monospace;
+}
+
+/* Pixel buttons */
+.pixel-btn {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 9px;
+  padding: 8px 14px;
+  border: 3px solid var(--blue-deep);
+  background: var(--blue-main);
+  color: white;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 var(--blue-deep);
+  transition: none;
+  display: inline-block;
+  text-align: center;
+  outline: none;
+  image-rendering: pixelated;
+}
+
+.pixel-btn:active {
+  box-shadow: 1px 1px 0 var(--blue-deep);
+  transform: translate(2px, 2px);
+}
+
+.pixel-btn:focus-visible {
+  outline: 2px solid var(--yellow);
+  outline-offset: 2px;
+}
+
+.pixel-btn-green {
+  background: var(--green-success);
+  border-color: var(--green-dark);
+  box-shadow: 3px 3px 0 var(--green-dark);
+}
+
+.pixel-btn-green:active {
+  box-shadow: 1px 1px 0 var(--green-dark);
+}
+
+.pixel-btn-red {
+  background: var(--red-error);
+  border-color: #8B1A27;
+  box-shadow: 3px 3px 0 #8B1A27;
+}
+
+.pixel-btn-yellow {
+  background: var(--yellow);
+  border-color: #B8930A;
+  box-shadow: 3px 3px 0 #B8930A;
+  color: var(--text-dark);
+}
+
+.pixel-btn-gray {
+  background: var(--gray-pixel);
+  border-color: #8A8E94;
+  box-shadow: 3px 3px 0 #8A8E94;
+  color: var(--text-dark);
+}
+
+/* Puzzle tile */
+.puzzle-tile {
+  width: 56px;
+  height: 56px;
+  border: 3px solid var(--blue-deep);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 16px;
+  background: var(--blue-light);
+  color: var(--blue-deep);
+  box-shadow: inset -2px -2px 0 rgba(0,0,0,0.2), inset 2px 2px 0 rgba(255,255,255,0.4);
+  transition: background 0.1s;
+}
+
+.puzzle-tile.blank {
+  background: var(--cream);
+  box-shadow: inset 2px 2px 4px rgba(0,0,0,0.15);
+}
+
+.puzzle-tile.goal-match {
+  background: #B8E4A0;
+  color: var(--green-dark);
+}
+
+.puzzle-tile-mini {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--blue-deep);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 7px;
+  background: var(--blue-light);
+  color: var(--blue-deep);
+}
+
+.puzzle-tile-mini.blank {
+  background: var(--cream);
+}
+
+/* Nav tabs */
+.pixel-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  background: var(--blue-deep);
+  padding: 6px;
+  border-bottom: 3px solid var(--blue-deep);
+}
+
+.pixel-nav-btn {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 7px;
+  padding: 5px 8px;
+  border: 2px solid var(--blue-deep);
+  background: var(--gray-pixel);
+  color: var(--text-dark);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.pixel-nav-btn.active {
+  background: var(--cream-pixel);
+  border-bottom: 2px solid var(--cream-pixel);
+  color: var(--blue-deep);
+}
+
+/* Metric cards */
+.metric-card {
+  background: var(--blue-deep);
+  color: white;
+  border: 2px solid var(--text-dark);
+  padding: 6px 10px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 8px;
+  text-align: center;
+}
+
+.metric-value {
+  font-size: 14px;
+  color: var(--yellow);
+  display: block;
+  margin-top: 4px;
+}
+
+/* Loading bar */
+@keyframes load-fill {
+  0% { width: 0%; }
+  60% { width: 80%; }
+  80% { width: 90%; }
+  100% { width: 100%; }
+}
+
+.loading-bar-fill {
+  animation: load-fill 1.5s ease-out forwards;
+  height: 100%;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--blue-main) 0px,
+    var(--blue-main) 10px,
+    var(--blue-deep) 10px,
+    var(--blue-deep) 12px
+  );
+}
+
+/* Pixel sparkle animation */
+@keyframes sparkle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.3; transform: scale(0.5); }
+}
+
+.sparkle {
+  animation: sparkle 1.2s ease-in-out infinite;
+}
+
+/* Pixel landscape */
+.pixel-landscape {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, #5E9DD1 0%, #8FC7E5 40%, #789B4A 60%, #334D36 100%);
+  image-rendering: pixelated;
+}
+
+/* Scrollable list */
+.pixel-list {
+  overflow-y: auto;
+  border: 2px solid var(--blue-main);
+  background: var(--cream-pixel);
+}
+
+.pixel-list::-webkit-scrollbar {
+  width: 10px;
+}
+
+.pixel-list::-webkit-scrollbar-track {
+  background: var(--gray-pixel);
+  border-left: 2px solid var(--blue-deep);
+}
+
+.pixel-list::-webkit-scrollbar-thumb {
+  background: var(--blue-main);
+  border: 1px solid var(--blue-deep);
+}
+
+/* Alert/dialog */
+.pixel-dialog {
+  background: var(--cream-pixel);
+  border: 3px solid var(--blue-deep);
+  box-shadow: 4px 4px 0 var(--blue-deep);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  min-width: 240px;
+  max-width: 90vw;
+}
+
+.pixel-dialog-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(18, 60, 131, 0.4);
+  z-index: 99;
+}
+
+/* Flashcard */
+.flashcard {
+  border: 3px solid var(--blue-deep);
+  background: var(--cream-pixel);
+  box-shadow: 4px 4px 0 var(--blue-deep);
+  cursor: pointer;
+  transition: transform 0.05s;
+}
+
+.flashcard:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px 0 var(--blue-deep);
+}
+
+.flashcard:focus-visible {
+  outline: 3px solid var(--yellow);
+}
+
+/* Progress bar */
+.progress-bar-track {
+  background: var(--gray-pixel);
+  border: 2px solid var(--blue-deep);
+  height: 16px;
+  position: relative;
+}
+
+.progress-bar-fill {
+  background: var(--blue-main);
+  height: 100%;
+  transition: width 0.1s;
+}
+
+/* Badge */
+.pixel-badge {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 7px;
+  padding: 3px 6px;
+  border: 2px solid currentColor;
+  display: inline-block;
+}
+
+/* Hover state for tiles */
+.puzzle-tile-input {
+  width: 56px;
+  height: 56px;
+  border: 3px solid var(--blue-deep);
+  background: var(--blue-light);
+  color: var(--blue-deep);
+  font-family: 'Press Start 2P', monospace;
+  font-size: 16px;
+  text-align: center;
+  box-shadow: inset -2px -2px 0 rgba(0,0,0,0.2), inset 2px 2px 0 rgba(255,255,255,0.4);
+  outline: none;
+}
+
+.puzzle-tile-input:focus {
+  border-color: var(--yellow);
+  background: #FFF8D0;
+}
+
+/* Star decoration */
+.pixel-star::before {
+  content: '✦';
+  color: var(--yellow);
+}
+
+/* Comparison table */
+.pixel-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'VT323', monospace;
+  font-size: 16px;
+}
+
+.pixel-table th {
+  background: var(--blue-main);
+  color: white;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 7px;
+  padding: 6px 8px;
+  border: 2px solid var(--blue-deep);
+  text-align: left;
+}
+
+.pixel-table td {
+  border: 2px solid var(--blue-main);
+  padding: 5px 8px;
+  color: var(--text-dark);
+}
+
+.pixel-table tr:nth-child(even) td {
+  background: #E8E6D8;
+}
+
+.pixel-table tr.highlight td {
+  background: var(--blue-light);
+  font-weight: bold;
+}
+
+/* Pixel rain fall */
+@keyframes fall-0 { from { transform: translateY(-100%); } to { transform: translateY(100vh); } }
+@keyframes fall-1 { from { transform: translateY(-60%); }  to { transform: translateY(100vh); } }
+@keyframes fall-2 { from { transform: translateY(-30%); }  to { transform: translateY(100vh); } }
+
+/* Floating cloud drift */
+@keyframes cloud-drift {
+  0%   { transform: translateX(0); }
+  50%  { transform: translateX(18px); }
+  100% { transform: translateX(0); }
+}
+
+/* Pixel grid overlay */
+.pixel-bg-grid {
+  background-image:
+    linear-gradient(rgba(25,79,165,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(25,79,165,0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Subtle scanline effect */
+.scanlines::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 3px,
+    rgba(0,0,0,0.015) 3px,
+    rgba(0,0,0,0.015) 4px
+  );
+  z-index: 999;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .sparkle, .loading-bar-fill {
+    animation: none;
+  }
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .puzzle-tile, .puzzle-tile-input {
+    width: 44px;
+    height: 44px;
+    font-size: 12px;
+  }
+  .puzzle-tile-mini {
+    width: 16px;
+    height: 16px;
+    font-size: 6px;
+  }
+}

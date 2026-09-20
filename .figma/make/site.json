@@ -1,0 +1,10 @@
+{
+  "description": "This web application streamlines assignment creation by allowing users to input prompts and images, generating tailored assignments quickly and efficiently.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
