@@ -1,7 +1,7 @@
-# MindMaze — 8-Puzzle Search Lab
+# 8-Puzzle Search Lab
 
 ## Project Description
-MindMaze is an interactive web application built to demonstrate how search algorithms solve the classic 8-puzzle problem. The project visualizes the board state, explores possible moves, and compares the behavior of uninformed and informed search strategies in a retro pixel-art interface inspired by classic computer-game styling.
+This project is an interactive web application built to demonstrate how search algorithms solve the classic 8-puzzle problem. The project visualizes the board state, explores possible moves, and compares the behavior of uninformed and informed search strategies in a retro pixel-art interface inspired by classic computer-game styling.
 
 This assignment focuses on the 8-puzzle as a state-space search problem and is designed to help users understand how algorithms such as Breadth-First Search (BFS), Depth-First Search (DFS), Iterative Deepening Depth-Limited Search (IDDLS), Greedy Best-First Search (GBFS), and A* find a path from the initial state to the goal state.
 
